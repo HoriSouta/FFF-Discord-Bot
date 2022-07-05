@@ -36,6 +36,7 @@ The prefix of the bot is t! but you can change if you know how to code
 * t!save: Save all of the player so you don't need to add them again
 * t!load: Load the data that you save so you can start a new game
 * t!answer [answer] (Only for strict mode): import your answer to the bot
+* t!channel [channel]: Change the channel to log your reslut
 ## Strict Mode
 
 You can access it by changing the value in config file of the mode to True
