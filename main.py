@@ -25,6 +25,7 @@ with open('config.json') as f:
 
 token = data['token']
 strictmode = data['Strict mode']
+channelid = data['Channel']
 
 def removetext(text):
     tebu = str(text)
@@ -157,7 +158,7 @@ async def on_message(message):
         if texts == answer and strictmode:
             embedlog = nextcord.Embed(title=f'Player{message.author.name} answered correctly in {finaltime}',color=0x11ff00)
             await channel.send(embed=embedlog)
-        else:
+        elif not strictmode:
             embedlog = nextcord.Embed(title=f'Player {message.author.name} answered in {finaltime} with the answer is {texts}',color=0x11ff00)
             await channel.send(embed=embedlog)
 
